@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mistral-fastapi
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: MODEL_PATH
+        value: models/mistral-7b-instruct-v0.1.Q4_K_M.gguf
